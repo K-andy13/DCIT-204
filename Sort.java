@@ -19,15 +19,46 @@ class Sort{
 
         }
     }
-    public static int[] bubbleSort(int[] T){
-        //input implementation here
-        return T;
-    }
+    public static void bubbleSort(int[] arr){/*
+//for(int p:arr){System.out.println(p);}
+      int n = arr.length;
+        int temp = 0;
+        for(int i=0; i<n; i++){
+            for(int j=1; j<(n-i);j++){
+                if(arr[j-i]>arr[j]){
+                    //swap elements
 
-    public static int[] selectionSort(int[] T){
-                //input implementation here
+                    temp = arr[j-1];
+                    arr[j-1]=arr[j];
+                    arr[j]=temp;
+                }
+            }
+       } 
+       System.out.println("Sorted array: ");
+       for(int p:arr){System.out.println(p);}
 
-        return T;
+    */}
+
+    public static void selectionSort(int[] T){
+ int n = T.length;
+        for (int i = 0; i < n - 1; i++) {
+            // Find the minimum element in the unsorted T
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (T[j] < T[minIndex]) {
+                    minIndex = j;
+                }
+            }
+
+            // Swap the minimum element with the current element
+            int temp = T[i];
+            T[i] = T[minIndex];
+            T[minIndex] = temp;
+        }
+
+    System.out.println("Sorted T:");
+    for(int p:T){System.out.println(p);}
+
     }
     public static int[] insertionSort(int[] T){
                 //input implementation here
