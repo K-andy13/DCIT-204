@@ -7,7 +7,7 @@ class Search{
              SearchorSort j=new SearchorSort();
 
         switch(x){
-            case 1:linearSearch(j.getProblemArr());
+            case 1:linearSearch(j.getProblemArr(),j.searchKey);
             break;
             case 2:binarySearch(j.getProblemArr());break;
             default:for(int p:SearchorSort.problemArr){System.out.println(p);}
@@ -16,12 +16,23 @@ class Search{
 
    
 
-    public static int linearSearch(int[] T){
-        //insert implemetation here
-        int soln=0;//assign index of your found key to soln or -1 if key is not found,0 is just a placeholder
-        System.out.println(soln);
+    public static void linearSearch(int[] T,int key){
+        System.out.println("Search key: "+key);
 
-        return soln;}
+        
+
+int finds=0;
+            for(int p=0;p<T.length;p++){
+                if(T[p]==key){finds++;
+                    System.out.println("Key found at index "+p);
+            }
+            }
+
+            if(finds<1){   System.out.println("Array does not contain the search key");
+}
+            
+        }
+    
 
         public static int binarySearch(int[] T){
             //insert implementation heres
