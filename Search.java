@@ -17,26 +17,16 @@ class Search{
    
 
     public static void linearSearch(int[] T,int key){
-        System.out.println("Search key: "+key);
+        LinearSearch linearSearchObject=new LinearSearch();
+               linearSearchObject.linearSearch(T,key);
 
-        
-
-int finds=0;
-            for(int p=0;p<T.length;p++){
-                if(T[p]==key){finds++;
-                    System.out.println("Key found at index "+p);
-            }
-            }
-
-            if(finds<1){   System.out.println("Array does not contain the search key");
-}
             
         }
     
 
         public static void binarySearch(int[] arr,int key){
             BinarySearch binarySearchobject=new BinarySearch();
-            System.out.println("Index of key is: ");
+            System.out.println("Index of key is ");
 System.out.print(binarySearchobject.binary(arr, key));
              
 }

@@ -1,6 +1,6 @@
-public class selectionSort {
+public class SelectionSort {
 
-    public static void sort(int[] array) {
+    public void sort(int[] array) {
         int n = array.length;
         for (int i = 0; i < n - 1; i++) {
             // Find the minimum element in the unsorted array
@@ -16,14 +16,18 @@ public class selectionSort {
             array[i] = array[minIndex];
             array[minIndex] = temp;
         }
+        System.out.println("Sorted array:");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         int[] array = {103, 5, 2, 7, 39, 1, 9, 6, 4, 8};
         sort(array);
         System.out.println("Sorted array:");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
-        }
+        }*/
     }
-}

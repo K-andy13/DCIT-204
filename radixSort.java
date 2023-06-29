@@ -1,9 +1,9 @@
 import java.util.Arrays;
 
-public class radixSort {
+public class RadixSort {
   
   // Radix Sort function
-  public static void radixSortAlgo(int[] arr) {
+  public void radixSortAlgo(int[] arr) {
     // Find the maximum number to determine the number of digits
     int max = Arrays.stream(arr).max().getAsInt();
 
@@ -38,6 +38,7 @@ public class radixSort {
 
     // Copy the sorted output array to the original array
     System.arraycopy(output, 0, arr, 0, n);
+  System.out.println("Sorted Array: " + Arrays.toString(arr));
   }
 
   /* Test the Radix Sort algorithm
