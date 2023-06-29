@@ -1,5 +1,5 @@
 public class bubbleSort{
-    static int[] bubbleAlgo(int[] arr){
+    static void bubbleSortAlgo(int[] arr){
         int n = arr.length;
         int temp = 0;
         for(int i=0; i<n; i++){
@@ -12,8 +12,25 @@ public class bubbleSort{
                     arr[j]=temp;
                 }
             }
-       } return arr;
+        }
     }
     
+
+
+public static void main(String[] args){
+    int arr[] = {3,60,35,2,45,320,5};
+
+    System.out.println("Array Before Bubble sort");
+    for(int i=0; i<arr.length;i++){
+        System.out.println(arr[i] + "");
+    }
+    System.out.println();
+
+    bubbleSortAlgo(arr);//sorting array elements using bubble sort
     
+    System.out.println("Array After Bubble Sort");
+    for(int i = 0; i< arr.length; i++){
+        System.out.print(arr[i] + "");
+    }
+}
 }

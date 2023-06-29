@@ -7,7 +7,7 @@ class Search{
              SearchorSort j=new SearchorSort();
 
         switch(x){
-            case 1:linearSearch(j.getProblemArr(),j.searchKey);
+            case 1:linearSearch(j.getProblemArr(),SearchorSort.searchKey);
             break;
             case 2:binarySearch(j.getProblemArr());break;
             default:for(int p:SearchorSort.problemArr){System.out.println(p);}

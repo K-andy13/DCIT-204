@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 class Sort{
 
@@ -13,8 +14,14 @@ class Sort{
             case 2:selectionSort(j.getProblemArr());break;
             case 3:insertionSort(j.getProblemArr());break;
             case 4:mergeSort(j.getProblemArr());break;
-            case 5:radixSort(j.getProblemArr());break;
-            case 6:quickSort(j.getProblemArr());break;
+            case 5:System.out.print("Original Array: ");
+            System.out.print("[");
+        for(int p:SearchorSort.problemArr){System.out.print(p +",");}
+                System.out.print("]\n");
+radixSortAlgo(j.getProblemArr());
+
+        break;
+            case 6:quickSortAlgo(j.getProblemArr());break;
             default:for(int p:SearchorSort.problemArr){System.out.println(p);}
 
         }
@@ -65,12 +72,48 @@ class Sort{
 
         return T;
     }
-    public static int[] radixSort(int[] T){
-                //input implementation here
+    public static void radixSortAlgo(int[] arr){
+        
+ // Find the maximum number to determine the number of digits
+       
 
-        return T;
+    int max = Arrays.stream(arr).max().getAsInt();
+
+    // Perform counting sort for every digit
+    for (int exp = 1; max / exp > 0; exp *= 10) {
+      countingSort(arr, exp);
     }
-    public static int[] quickSort(int[] T){
+  }
+
+  // Counting Sort function to sort the array based on the digit at exp
+  private static void countingSort(int[] arr, int exp) {
+    int n = arr.length;
+    int[] output = new int[n];
+    int[] count = new int[10];
+    Arrays.fill(count, 0);
+
+    // Count the occurrences of each digit in the input array
+    for (int i = 0; i < n; i++) {
+      count[(arr[i] / exp) % 10]++;
+    }
+
+    // Calculate the cumulative count array
+    for (int i = 1; i < 10; i++) {
+      count[i] += count[i - 1];
+    }
+
+    // Build the output array in sorted order
+    for (int i = n - 1; i >= 0; i--) {
+      output[count[(arr[i] / exp) % 10] - 1] = arr[i];
+      count[(arr[i] / exp) % 10]--;
+    }
+
+    // Copy the sorted output array to the original array
+    System.arraycopy(output, 0, arr, 0, n);
+   System.out.println("Sorted Array: " + Arrays.toString(arr));
+
+}
+    public static int[] quickSortAlgo(int[] T){
                 //input implementation here
 
         return T;
