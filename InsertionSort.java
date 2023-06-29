@@ -3,12 +3,14 @@ import java.util.Arrays;
 public class InsertionSort {
     public static  void main(String[] arg){
         int array[] = {9,1,8,2,7,6,3,5,4};
-        insertionSort(array);
+                InsertionSort insertionSortObj=new InsertionSort();
+
+        insertionSortObj.insertionSort(array);
 
         System.out.println(Arrays.toString(array));
     }
 
-    private static void insertionSort(int[] array){
+    public void insertionSort(int[] array){
 
         for (int i=1; i<array.length; i++){
             int temp = array[i];

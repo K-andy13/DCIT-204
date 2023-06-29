@@ -41,10 +41,11 @@ bubbleSortObj.bubbleSort(arr);
  
 
     }
-    public static int[] insertionSort(int[] T){
-                //input implementation here
+    public static void insertionSort(int[] T){
+        InsertionSort insertionSortObj=new InsertionSort();
+        insertionSortObj.insertionSort(T);
+                insertionSortObj.insertionSort(T);
 
-        return T;
     }
     public static void radixSortAlgo(int[] arr){
         RadixSort radixSortObject=new RadixSort();
