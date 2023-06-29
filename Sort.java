@@ -52,10 +52,13 @@ bubbleSortObj.bubbleSort(arr);
 
  
 }
-    public static int[] quickSortAlgo(int[] T){
-                //input implementation here
+    public static void quickSortAlgo(int[] T){
+QuickSort quickSortObj=new QuickSort();
+System.out.println("Original Array: " + Arrays.toString(T));
+quickSortObj.quickSort(T, 0,T.length-1);
+System.out.println("Sorted Array: " + Arrays.toString(T));
 
-        return T;
+
     }
 
      public static void mergeSort(int[] T){

@@ -1,13 +1,17 @@
+import java.util.Arrays;
+
 public class QuickSort {
 
     public static void main(String[] args) {
-        int[] array = {9, 3, 7, 5, 1, 6, 4, 8, 2};
+        int[] array = {0, 3, 700, 5, 1, 6, 4, 8, 2};
         System.out.println("Original Array: " + Arrays.toString(array));
-        quickSort(array, 0, array.length - 1);
+        QuickSort quickSortObj=new QuickSort();
+
+        quickSortObj.quickSort(array, 0, array.length - 1);
         System.out.println("Sorted Array: " + Arrays.toString(array));
     }
 
-    public static void quickSort(int[] array, int low, int high) {
+    public  void quickSort(int[] array, int low, int high) {
         if (low < high) {
             int pivotIndex = partition(array, low, high);
             quickSort(array, low, pivotIndex - 1);
