@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 class SearchorSort{
     public int problemSize=0;
     public static int searchKey;
@@ -57,8 +58,8 @@ else{Sort.intro();
 Sort.selectAlgo(scan.nextInt());}
  
 /*implemeted so far
-search:linear
-  sort:selection
+search:linear,binary
+  sort:selection,radix
 */
     }
 }
