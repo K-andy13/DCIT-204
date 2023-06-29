@@ -26,25 +26,14 @@ radixSortAlgo(j.getProblemArr());
 
         }
     }
-    public static void bubbleSort(int[] arr){/*
-//for(int p:arr){System.out.println(p);}
-      int n = arr.length;
-        int temp = 0;
-        for(int i=0; i<n; i++){
-            for(int j=1; j<(n-i);j++){
-                if(arr[j-i]>arr[j]){
-                    //swap elements
+    public static void bubbleSort(int[] arr){
+BubbleSort bubbleSortObj=new BubbleSort();
+bubbleSortObj.bubbleSort(arr);
+ System.out.print("[");
 
-                    temp = arr[j-1];
-                    arr[j-1]=arr[j];
-                    arr[j]=temp;
-                }
-            }
-       } 
-       System.out.println("Sorted array: ");
-       for(int p:arr){System.out.println(p);}
-
-    */}
+    for(int i: arr){ System.out.print(i+","); }
+      System.out.print("]");
+    }
 
     public static void selectionSort(int[] T){
         SelectionSort selectionSortObject=new SelectionSort();

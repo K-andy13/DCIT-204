@@ -1,36 +1,26 @@
-public class bubbleSort{
-    static void bubbleSortAlgo(int[] arr){
-        int n = arr.length;
-        int temp = 0;
-        for(int i=0; i<n; i++){
-            for(int j=1; j<(n-i);j++){
-                if(arr[j-i]>arr[j]){
-                    //swap elements
+ class BubbleSort{
+    
 
-                    temp = arr[j-1];
-                    arr[j-1]=arr[j];
-                    arr[j]=temp;
+public static void main(String[] args){
+    
+    int array[] = {3,60,35,2,45,320,5};
+
+    bubbleSort(array);
+        System.out.print("[");
+
+    for(int i: array){ System.out.print(i+","); }
+      System.out.print("]");
+
+}
+    public static void bubbleSort(int array[]){
+        for(int i=0; i< array.length - 1; i++){
+            for(int j=0; j< array.length -i - 1; j++){
+                if(array[j]>array[j+1]){
+                    int temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
                 }
             }
         }
     }
-    
-
-
-public static void main(String[] args){
-    int arr[] = {3,60,35,2,45,320,5};
-
-    System.out.println("Array Before Bubble sort");
-    for(int i=0; i<arr.length;i++){
-        System.out.println(arr[i] + "");
-    }
-    System.out.println();
-
-    bubbleSortAlgo(arr);//sorting array elements using bubble sort
-    
-    System.out.println("Array After Bubble Sort");
-    for(int i = 0; i< arr.length; i++){
-        System.out.print(arr[i] + "");
-    }
-}
 }
