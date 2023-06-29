@@ -69,9 +69,11 @@ radixSortAlgo(j.getProblemArr());
         return T;
     }
 
-     public static int[] mergeSort(int[] T){
-                //input implementation here
-
-        return T;
-    }
+     public static void mergeSort(int[] T){
+MergeSort mergeSortObj=new MergeSort();
+mergeSortObj.mergeSort(T);
+for (int p : T) {
+            System.out.print(p + ",");
+        }
+ }
 }
