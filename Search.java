@@ -9,7 +9,7 @@ class Search{
         switch(x){
             case 1:linearSearch(j.getProblemArr(),SearchorSort.searchKey);
             break;
-            case 2:binarySearch(j.getProblemArr());break;
+            case 2:binarySearch(j.getProblemArr(),SearchorSort.searchKey);break;
             default:for(int p:SearchorSort.problemArr){System.out.println(p);}
 
         }}
@@ -34,9 +34,10 @@ int finds=0;
         }
     
 
-        public static int binarySearch(int[] T){
-            //insert implementation heres
-            int soln=0;//assign index of your found key to soln or -1 if key is not found,0 is just a placeholder
-            System.out.println(soln);
-            return soln;}
+        public static void binarySearch(int[] arr,int key){
+            BinarySearch binarySearchobject=new BinarySearch();
+            System.out.println("Index of key is: ");
+System.out.print(binarySearchobject.binary(arr, key));
+             
+}
 }
