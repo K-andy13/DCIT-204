@@ -14,13 +14,7 @@ class Sort{
             case 2:selectionSort(j.getProblemArr());break;
             case 3:insertionSort(j.getProblemArr());break;
             case 4:mergeSort(j.getProblemArr());break;
-            case 5:System.out.print("Original Array: ");
-            System.out.print("[");
-        for(int p:SearchorSort.problemArr){System.out.print(p +",");}
-                System.out.print("]\n");
-radixSortAlgo(j.getProblemArr());
-
-        break;
+            case 5:radixSortAlgo(j.getProblemArr());break;
             case 6:quickSortAlgo(j.getProblemArr());break;
             default:for(int p:SearchorSort.problemArr){System.out.println(p);}
 
@@ -44,12 +38,15 @@ bubbleSortObj.bubbleSort(arr);
     public static void insertionSort(int[] T){
         InsertionSort insertionSortObj=new InsertionSort();
         insertionSortObj.insertionSort(T);
-                insertionSortObj.insertionSort(T);
+        System.out.println(Arrays.toString(T));
 
     }
     public static void radixSortAlgo(int[] arr){
+      System.out.println("Original Array: " + Arrays.toString(arr));
+
         RadixSort radixSortObject=new RadixSort();
                 radixSortObject.radixSortAlgo(arr);
+
 
  
 }
