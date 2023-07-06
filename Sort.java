@@ -62,8 +62,9 @@ System.out.println("Sorted Array: " + Arrays.toString(T));
      public static void mergeSort(int[] T){
 MergeSort mergeSortObj=new MergeSort();
 mergeSortObj.mergeSort(T);
-for (int p : T) {
-            System.out.print(p + ",");
-        }
+System.out.println("Sorted Array: " + Arrays.toString(T));
+
+
+
  }
 }
